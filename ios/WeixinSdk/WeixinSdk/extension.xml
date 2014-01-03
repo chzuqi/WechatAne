@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.8">
+	<id>com.czqsoft.ane.WeixinSdk</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>libWeixinSdk.a</nativeLibrary>
+				<initializer>WeixinSdkExtInitializer</initializer>
+				<finalizer>WeixinSdkExtFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default"> 
+			<applicationDeployment/> 
+		</platform>
+	</platforms>
+</extension>

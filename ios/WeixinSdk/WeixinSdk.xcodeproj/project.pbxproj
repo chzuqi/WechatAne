@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61DE15691875107100597785 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15681875107100597785 /* Foundation.framework */; };
+		61DE156B1875107100597785 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE156A1875107100597785 /* CoreFoundation.framework */; };
+		61DE156D1875107100597785 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE156C1875107100597785 /* UIKit.framework */; };
+		61DE156F1875107100597785 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE156E1875107100597785 /* MobileCoreServices.framework */; };
+		61DE15711875107100597785 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15701875107100597785 /* CoreGraphics.framework */; };
+		61DE15731875107100597785 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15721875107100597785 /* SystemConfiguration.framework */; };
+		61DE15751875107100597785 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15741875107100597785 /* AudioToolbox.framework */; };
+		61DE15771875107100597785 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15761875107100597785 /* CFNetwork.framework */; };
+		61DE15791875107100597785 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15781875107100597785 /* QuartzCore.framework */; };
+		61DE157B1875107100597785 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE157A1875107100597785 /* OpenGLES.framework */; };
+		61DE157D1875107100597785 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE157C1875107100597785 /* CoreLocation.framework */; };
+		61DE157F1875107100597785 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE157E1875107100597785 /* CoreMedia.framework */; };
+		61DE15811875107100597785 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15801875107100597785 /* CoreVideo.framework */; };
+		61DE15831875107100597785 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15821875107100597785 /* AVFoundation.framework */; };
+		61DE15851875107100597785 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15841875107100597785 /* Security.framework */; };
+		61DE15951875107100597785 /* WeixinSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DE15941875107100597785 /* WeixinSdk.m */; };
+		61DE15A7187511EB00597785 /* CCTypeConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DE15A5187511EB00597785 /* CCTypeConversion.h */; };
+		61DE15A8187511EB00597785 /* CCTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DE15A6187511EB00597785 /* CCTypeConversion.m */; };
+		61DE15AB1875126800597785 /* CCExtensionHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DE15A91875126800597785 /* CCExtensionHandle.h */; };
+		61DE15AC1875126800597785 /* CCExtensionHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DE15AA1875126800597785 /* CCExtensionHandle.m */; };
+		61DE15B11875156100597785 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE15AE1875156100597785 /* libWeChatSDK.a */; };
+		61DE15B21875156100597785 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DE15AF1875156100597785 /* WXApi.h */; };
+		61DE15B31875156100597785 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DE15B01875156100597785 /* WXApiObject.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61DE158C1875107100597785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61DE155D1875107100597785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61DE15641875107100597785;
+			remoteInfo = WeixinSdk;
+		};
+		61DE158E1875107100597785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61DE155D1875107100597785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61DE15871875107100597785;
+			remoteInfo = WeixinSdk.ane;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61DE15651875107100597785 /* libWeixinSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWeixinSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		61DE15681875107100597785 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61DE156A1875107100597785 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		61DE156C1875107100597785 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61DE156E1875107100597785 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		61DE15701875107100597785 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61DE15721875107100597785 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		61DE15741875107100597785 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		61DE15761875107100597785 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		61DE15781875107100597785 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		61DE157A1875107100597785 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		61DE157C1875107100597785 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		61DE157E1875107100597785 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		61DE15801875107100597785 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		61DE15821875107100597785 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		61DE15841875107100597785 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		61DE15881875107100597785 /* WeixinSdk.ane */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = WeixinSdk.ane; sourceTree = BUILT_PRODUCTS_DIR; };
+		61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugWeixinSdkAIRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61DE15921875107100597785 /* WeixinSdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeixinSdk-Prefix.pch"; sourceTree = "<group>"; };
+		61DE15931875107100597785 /* WeixinSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeixinSdk.h; sourceTree = "<group>"; };
+		61DE15941875107100597785 /* WeixinSdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeixinSdk.m; sourceTree = "<group>"; };
+		61DE15961875107100597785 /* extension.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = extension.xml; sourceTree = "<group>"; };
+		61DE15971875107100597785 /* platformoptions.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = platformoptions.xml; sourceTree = "<group>"; };
+		61DE15981875107100597785 /* generateANE.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generateANE.sh; sourceTree = "<group>"; };
+		61DE15991875107100597785 /* debugIPA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = debugIPA.sh; sourceTree = "<group>"; };
+		61DE15A5187511EB00597785 /* CCTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTypeConversion.h; sourceTree = "<group>"; };
+		61DE15A6187511EB00597785 /* CCTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTypeConversion.m; sourceTree = "<group>"; };
+		61DE15A91875126800597785 /* CCExtensionHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCExtensionHandle.h; sourceTree = "<group>"; };
+		61DE15AA1875126800597785 /* CCExtensionHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCExtensionHandle.m; sourceTree = "<group>"; };
+		61DE15AE1875156100597785 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		61DE15AF1875156100597785 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		61DE15B01875156100597785 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61DE15621875107100597785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61DE157F1875107100597785 /* CoreMedia.framework in Frameworks */,
+				61DE15851875107100597785 /* Security.framework in Frameworks */,
+				61DE156B1875107100597785 /* CoreFoundation.framework in Frameworks */,
+				61DE157D1875107100597785 /* CoreLocation.framework in Frameworks */,
+				61DE156F1875107100597785 /* MobileCoreServices.framework in Frameworks */,
+				61DE15811875107100597785 /* CoreVideo.framework in Frameworks */,
+				61DE15771875107100597785 /* CFNetwork.framework in Frameworks */,
+				61DE156D1875107100597785 /* UIKit.framework in Frameworks */,
+				61DE15711875107100597785 /* CoreGraphics.framework in Frameworks */,
+				61DE157B1875107100597785 /* OpenGLES.framework in Frameworks */,
+				61DE15751875107100597785 /* AudioToolbox.framework in Frameworks */,
+				61DE15731875107100597785 /* SystemConfiguration.framework in Frameworks */,
+				61DE15691875107100597785 /* Foundation.framework in Frameworks */,
+				61DE15831875107100597785 /* AVFoundation.framework in Frameworks */,
+				61DE15791875107100597785 /* QuartzCore.framework in Frameworks */,
+				61DE15B11875156100597785 /* libWeChatSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61DE155C1875107100597785 = {
+			isa = PBXGroup;
+			children = (
+				61DE15901875107100597785 /* WeixinSdk */,
+				61DE15671875107100597785 /* Frameworks */,
+				61DE15661875107100597785 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61DE15661875107100597785 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61DE15651875107100597785 /* libWeixinSdk.a */,
+				61DE15881875107100597785 /* WeixinSdk.ane */,
+				61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61DE15671875107100597785 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61DE15681875107100597785 /* Foundation.framework */,
+				61DE156A1875107100597785 /* CoreFoundation.framework */,
+				61DE156C1875107100597785 /* UIKit.framework */,
+				61DE156E1875107100597785 /* MobileCoreServices.framework */,
+				61DE15701875107100597785 /* CoreGraphics.framework */,
+				61DE15721875107100597785 /* SystemConfiguration.framework */,
+				61DE15741875107100597785 /* AudioToolbox.framework */,
+				61DE15761875107100597785 /* CFNetwork.framework */,
+				61DE15781875107100597785 /* QuartzCore.framework */,
+				61DE157A1875107100597785 /* OpenGLES.framework */,
+				61DE157C1875107100597785 /* CoreLocation.framework */,
+				61DE157E1875107100597785 /* CoreMedia.framework */,
+				61DE15801875107100597785 /* CoreVideo.framework */,
+				61DE15821875107100597785 /* AVFoundation.framework */,
+				61DE15841875107100597785 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61DE15901875107100597785 /* WeixinSdk */ = {
+			isa = PBXGroup;
+			children = (
+				61DE15AD1875156100597785 /* SDKExport */,
+				61DE15A5187511EB00597785 /* CCTypeConversion.h */,
+				61DE15A6187511EB00597785 /* CCTypeConversion.m */,
+				61DE15931875107100597785 /* WeixinSdk.h */,
+				61DE15941875107100597785 /* WeixinSdk.m */,
+				61DE15A91875126800597785 /* CCExtensionHandle.h */,
+				61DE15AA1875126800597785 /* CCExtensionHandle.m */,
+				61DE15911875107100597785 /* Supporting Files */,
+			);
+			path = WeixinSdk;
+			sourceTree = "<group>";
+		};
+		61DE15911875107100597785 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61DE15921875107100597785 /* WeixinSdk-Prefix.pch */,
+				61DE15961875107100597785 /* extension.xml */,
+				61DE15971875107100597785 /* platformoptions.xml */,
+				61DE15981875107100597785 /* generateANE.sh */,
+				61DE15991875107100597785 /* debugIPA.sh */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61DE15AD1875156100597785 /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				61DE15AE1875156100597785 /* libWeChatSDK.a */,
+				61DE15AF1875156100597785 /* WXApi.h */,
+				61DE15B01875156100597785 /* WXApiObject.h */,
+			);
+			path = SDKExport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		61DE15631875107100597785 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61DE15B21875156100597785 /* WXApi.h in Headers */,
+				61DE15AB1875126800597785 /* CCExtensionHandle.h in Headers */,
+				61DE15A7187511EB00597785 /* CCTypeConversion.h in Headers */,
+				61DE15B31875156100597785 /* WXApiObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		61DE15641875107100597785 /* WeixinSdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61DE159C1875107100597785 /* Build configuration list for PBXNativeTarget "WeixinSdk" */;
+			buildPhases = (
+				61DE15611875107100597785 /* Sources */,
+				61DE15621875107100597785 /* Frameworks */,
+				61DE15631875107100597785 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeixinSdk;
+			productName = WeixinSdk;
+			productReference = 61DE15651875107100597785 /* libWeixinSdk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		61DE15871875107100597785 /* WeixinSdk.ane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61DE159F1875107100597785 /* Build configuration list for PBXNativeTarget "WeixinSdk.ane" */;
+			buildPhases = (
+				61DE15861875107100597785 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61DE158D1875107100597785 /* PBXTargetDependency */,
+			);
+			name = WeixinSdk.ane;
+			productName = WeixinSdk.ane;
+			productReference = 61DE15881875107100597785 /* WeixinSdk.ane */;
+			productType = "com.apple.product-type.library.static";
+		};
+		61DE158A1875107100597785 /* DebugWeixinSdkAIRApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61DE15A21875107100597785 /* Build configuration list for PBXNativeTarget "DebugWeixinSdkAIRApp" */;
+			buildPhases = (
+				61DE15891875107100597785 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61DE158F1875107100597785 /* PBXTargetDependency */,
+			);
+			name = DebugWeixinSdkAIRApp;
+			productName = DebugWeixinSdkAIRApp;
+			productReference = 61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61DE155D1875107100597785 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 61DE15601875107100597785 /* Build configuration list for PBXProject "WeixinSdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 61DE155C1875107100597785;
+			productRefGroup = 61DE15661875107100597785 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61DE15641875107100597785 /* WeixinSdk */,
+				61DE15871875107100597785 /* WeixinSdk.ane */,
+				61DE158A1875107100597785 /* DebugWeixinSdkAIRApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61DE15861875107100597785 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\n\t\t\t\t\t\t\t\tchmod 755 \"$PROJECT_DIR/$PROJECT_NAME/generateANE.sh\"\n\t\t\t\t\t\t\t\t\"$PROJECT_DIR/$PROJECT_NAME/generateANE.sh\"\n\t\t\t\t\t";
+		};
+		61DE15891875107100597785 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\n\t\t\t\t\t\t\t\tchmod 755 \"$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh\"\n\t\t\t\t\t\t\t\t\"$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61DE15611875107100597785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61DE15AC1875126800597785 /* CCExtensionHandle.m in Sources */,
+				61DE15A8187511EB00597785 /* CCTypeConversion.m in Sources */,
+				61DE15951875107100597785 /* WeixinSdk.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61DE158D1875107100597785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61DE15641875107100597785 /* WeixinSdk */;
+			targetProxy = 61DE158C1875107100597785 /* PBXContainerItemProxy */;
+		};
+		61DE158F1875107100597785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61DE15871875107100597785 /* WeixinSdk.ane */;
+			targetProxy = 61DE158E1875107100597785 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		61DE159A1875107100597785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_3.8/include/;
+			};
+			name = Debug;
+		};
+		61DE159B1875107100597785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_3.8/include/;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61DE159D1875107100597785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WeixinSdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeixinSdk/WeixinSdk-Prefix.pch";
+				GCC_VERSION = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/czq/Documents/anes/WeixinAne/ios/WeixinSdk/WeixinSdk/SDKExport,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		61DE159E1875107100597785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WeixinSdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeixinSdk/WeixinSdk-Prefix.pch";
+				GCC_VERSION = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/czq/Documents/anes/WeixinAne/ios/WeixinSdk/WeixinSdk/SDKExport,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		61DE15A01875107100597785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
+				EXECUTABLE_EXTENSION = ane;
+				EXECUTABLE_PREFIX = "";
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				PRODUCT_NAME = WeixinSdk;
+			};
+			name = Debug;
+		};
+		61DE15A11875107100597785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
+				EXECUTABLE_EXTENSION = ane;
+				EXECUTABLE_PREFIX = "";
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				PRODUCT_NAME = WeixinSdk;
+			};
+			name = Release;
+		};
+		61DE15A31875107100597785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				PRODUCT_NAME = DebugWeixinSdkAIRApp;
+			};
+			name = Debug;
+		};
+		61DE15A41875107100597785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				PRODUCT_NAME = DebugWeixinSdkAIRApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61DE15601875107100597785 /* Build configuration list for PBXProject "WeixinSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61DE159A1875107100597785 /* Debug */,
+				61DE159B1875107100597785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61DE159C1875107100597785 /* Build configuration list for PBXNativeTarget "WeixinSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61DE159D1875107100597785 /* Debug */,
+				61DE159E1875107100597785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61DE159F1875107100597785 /* Build configuration list for PBXNativeTarget "WeixinSdk.ane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61DE15A01875107100597785 /* Debug */,
+				61DE15A11875107100597785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61DE15A21875107100597785 /* Build configuration list for PBXNativeTarget "DebugWeixinSdkAIRApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61DE15A31875107100597785 /* Debug */,
+				61DE15A41875107100597785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61DE155D1875107100597785 /* Project object */;
+}
