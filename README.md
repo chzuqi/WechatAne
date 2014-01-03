@@ -9,6 +9,15 @@ WeixinSdk.instance.addEventListener(StatusEvent.STATUS, onStatus);
 function onStatus(e:StatusEvent):void
 { 
     trace(e.code, e.level);
+    switch(e.code)
+	{
+		case "onResp":
+			if (e.level == "0")
+			{
+                //onShare();
+			}
+			break;
+	}
 }
 
 WeixinSdk.instance.sendTextContent(WeixinSdk.WXSceneSession, "text");
