@@ -27,12 +27,12 @@ void WeixinContextInitializer(void* extData, const uint8_t* ctxType, FREContext 
 {
     static FRENamedFunction func[] = 
     {
-        MAP_FUNCTION(registerWeixin, NULL),
-        MAP_FUNCTION(sendTextContent, NULL),
-        MAP_FUNCTION(sendLinkContent, NULL),
-        MAP_FUNCTION(sendImageContent, NULL),
-        MAP_FUNCTION(sendAppContent, NULL),
-        MAP_FUNCTION(openUrl, NULL),
+        MAP_FUNCTION(wechat_function_register, NULL),
+        MAP_FUNCTION(wechat_function_text, NULL),
+        MAP_FUNCTION(wechat_function_link, NULL),
+        MAP_FUNCTION(wechat_function_image, NULL),
+        MAP_FUNCTION(wechat_function_app, NULL),
+        MAP_FUNCTION(wechat_function_open_url, NULL),
     };
     
     *numFunctionsToTest = sizeof(func) / sizeof(FRENamedFunction);
@@ -47,27 +47,27 @@ void WeixinContextFinalizer(FREContext ctx)
 }
 
 
-ANE_FUNCTION(registerWeixin)
+ANE_FUNCTION(wechat_function_register)
 {
     return [CCext_handle wxRegister:argv[0]];
 }
-ANE_FUNCTION(sendTextContent)
+ANE_FUNCTION(wechat_function_text)
 {
     return [CCext_handle sendTextContent:argv[0] text:argv[1]];
 }
-ANE_FUNCTION(sendLinkContent)
+ANE_FUNCTION(wechat_function_link)
 {
     return [CCext_handle sendLinkContent:argv[0] title:argv[1] text:argv[2] url:argv[3]];
 }
-ANE_FUNCTION(sendImageContent)
+ANE_FUNCTION(wechat_function_image)
 {
     return [CCext_handle sendImageContent:argv[0] image:argv[1]];
 }
-ANE_FUNCTION(sendAppContent)
+ANE_FUNCTION(wechat_function_app)
 {
     return [CCext_handle sendAppContent:argv[0] title:argv[1] text:argv[1] url:argv[3] image:argv[4]];
 }
-ANE_FUNCTION(openUrl)
+ANE_FUNCTION(wechat_function_open_url)
 {
     return [CCext_handle openUrl:argv[0]];
 }

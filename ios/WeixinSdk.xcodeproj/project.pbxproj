@@ -40,13 +40,6 @@
 			remoteGlobalIDString = 61DE15641875107100597785;
 			remoteInfo = WeixinSdk;
 		};
-		61DE158E1875107100597785 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 61DE155D1875107100597785 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61DE15871875107100597785;
-			remoteInfo = WeixinSdk.ane;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +60,6 @@
 		61DE15821875107100597785 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		61DE15841875107100597785 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		61DE15881875107100597785 /* WeixinSdk.ane */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = WeixinSdk.ane; sourceTree = BUILT_PRODUCTS_DIR; };
-		61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugWeixinSdkAIRApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DE15921875107100597785 /* WeixinSdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeixinSdk-Prefix.pch"; sourceTree = "<group>"; };
 		61DE15931875107100597785 /* WeixinSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeixinSdk.h; sourceTree = "<group>"; };
 		61DE15941875107100597785 /* WeixinSdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeixinSdk.m; sourceTree = "<group>"; };
@@ -125,7 +117,6 @@
 			children = (
 				61DE15651875107100597785 /* libWeixinSdk.a */,
 				61DE15881875107100597785 /* WeixinSdk.ane */,
-				61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,22 +230,6 @@
 			productReference = 61DE15881875107100597785 /* WeixinSdk.ane */;
 			productType = "com.apple.product-type.library.static";
 		};
-		61DE158A1875107100597785 /* DebugWeixinSdkAIRApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 61DE15A21875107100597785 /* Build configuration list for PBXNativeTarget "DebugWeixinSdkAIRApp" */;
-			buildPhases = (
-				61DE15891875107100597785 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				61DE158F1875107100597785 /* PBXTargetDependency */,
-			);
-			name = DebugWeixinSdkAIRApp;
-			productName = DebugWeixinSdkAIRApp;
-			productReference = 61DE158B1875107100597785 /* DebugWeixinSdkAIRApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,7 +252,6 @@
 			targets = (
 				61DE15641875107100597785 /* WeixinSdk */,
 				61DE15871875107100597785 /* WeixinSdk.ane */,
-				61DE158A1875107100597785 /* DebugWeixinSdkAIRApp */,
 			);
 		};
 /* End PBXProject section */
@@ -295,19 +269,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "\n\t\t\t\t\t\t\t\tchmod 755 \"$PROJECT_DIR/$PROJECT_NAME/generateANE.sh\"\n\t\t\t\t\t\t\t\t\"$PROJECT_DIR/$PROJECT_NAME/generateANE.sh\"\n\t\t\t\t\t";
-		};
-		61DE15891875107100597785 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "\n\t\t\t\t\t\t\t\tchmod 755 \"$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh\"\n\t\t\t\t\t\t\t\t\"$PROJECT_DIR/$PROJECT_NAME/debugIPA.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -329,11 +290,6 @@
 			isa = PBXTargetDependency;
 			target = 61DE15641875107100597785 /* WeixinSdk */;
 			targetProxy = 61DE158C1875107100597785 /* PBXContainerItemProxy */;
-		};
-		61DE158F1875107100597785 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 61DE15871875107100597785 /* WeixinSdk.ane */;
-			targetProxy = 61DE158E1875107100597785 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,24 +400,6 @@
 			};
 			name = Release;
 		};
-		61DE15A31875107100597785 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
-				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
-				PRODUCT_NAME = DebugWeixinSdkAIRApp;
-			};
-			name = Debug;
-		};
-		61DE15A41875107100597785 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
-				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
-				PRODUCT_NAME = DebugWeixinSdkAIRApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,6 +419,7 @@
 				61DE159E1875107100597785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61DE159F1875107100597785 /* Build configuration list for PBXNativeTarget "WeixinSdk.ane" */ = {
 			isa = XCConfigurationList;
@@ -489,14 +428,7 @@
 				61DE15A11875107100597785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		61DE15A21875107100597785 /* Build configuration list for PBXNativeTarget "DebugWeixinSdkAIRApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				61DE15A31875107100597785 /* Debug */,
-				61DE15A41875107100597785 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

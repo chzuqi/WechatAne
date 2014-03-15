@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_5161b8a4b9e979539885e1bd7c5dd8b90168b83e30eaf97c335245857c3f1fb3_flash_display_Sprite" mod="1394780387597" signatureChecksum="3959388599" >
+        <def id="_5161b8a4b9e979539885e1bd7c5dd8b90168b83e30eaf97c335245857c3f1fb3_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/czqsoft/anes/WeixinSdk" mod="1394780386000" signatureChecksum="1781409711" >
+        <def id="com.czqsoft.anes:WeixinSdk" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:InvokeEvent" type="e" /> 
+        <dep id="flash.desktop:NativeApplication" type="e" /> 
+        <dep id="flash.events:IEventDispatcher" type="s" /> 
+        <dep id="flash.display:BitmapData" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="flash.events:InvokeEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="897386a65a768f478ff133f2f161d2f17537818dd1b54d676c4aaae87ae191dd"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

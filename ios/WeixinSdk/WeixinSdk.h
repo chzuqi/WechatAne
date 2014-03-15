@@ -75,9 +75,9 @@ void WeixinContextFinalizer(FREContext ctx);
  * Users of this template are expected to change this and add similar functions 
  * to be able to call the native functions in the ANE from their ActionScript code
 */
-ANE_FUNCTION(registerWeixin);
-ANE_FUNCTION(sendTextContent);
-ANE_FUNCTION(sendLinkContent);
-ANE_FUNCTION(sendImageContent);
-ANE_FUNCTION(sendAppContent);
-ANE_FUNCTION(openUrl);
+ANE_FUNCTION(wechat_function_register);
+ANE_FUNCTION(wechat_function_text);
+ANE_FUNCTION(wechat_function_link);
+ANE_FUNCTION(wechat_function_image);
+ANE_FUNCTION(wechat_function_app);
+ANE_FUNCTION(wechat_function_open_url);

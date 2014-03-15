@@ -26,7 +26,6 @@ package com.czqsoft.anes
 	public class WeixinSdk extends EventDispatcher
 	{
 		private static var _instance:WeixinSdk;
-		private static var _extContext:ExtensionContext;
 		private static var _appid:String;
 		
 		private static var APPSTRING:String = 'com.weixin.ane';
@@ -60,16 +59,6 @@ package com.czqsoft.anes
 			if (!_instance)
 			{
 				_instance=new WeixinSdk();
-				_extContext=ExtensionContext.createExtensionContext(APPSTRING, null);
-				if (!_extContext)
-				{
-					trace("ERROR - Extension context is null. Please check if extension.xml is setup correctly.");
-				}
-				else
-				{
-					_extContext.addEventListener(StatusEvent.STATUS, _instance.statusHandler);
-					NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE,_instance.systemInvoke);
-				}
 			}
 			return _instance;
 		}
@@ -80,10 +69,6 @@ package com.czqsoft.anes
 		 */		
 		protected function systemInvoke(event:InvokeEvent):void
 		{
-			if(event.arguments.length>0){
-				var url:String = event.arguments[0] as String;
-				var b:Boolean = _extContext.call(WECHAT_FUNCTION_OPEN_URL,url);
-			}
 		}
 		
 		protected function statusHandler(event:StatusEvent):void
@@ -97,13 +82,10 @@ package com.czqsoft.anes
 		 */		
 		public function register(appid:String):void
 		{
-			_appid = appid;
-			_extContext.call(WECHAT_FUNCTION_REGISTER, appid);
 		}
 		
 		public function sendTextContent(shareTo:String, text:String):void
 		{
-			_extContext.call(WECHAT_FUNCTION_SEND_TEXT, shareTo, text);
 		}
 		/**
 		 * 分享链接 
@@ -115,7 +97,6 @@ package com.czqsoft.anes
 		 */		
 		public function sendLinkContent(shareTo:String, title:String, text:String, url:String):void
 		{
-			_extContext.call(WECHAT_FUNCTION_SEND_LINK, shareTo, title, text, url);
 		}
 		/**
 		 * 分享图片信息 
@@ -125,7 +106,6 @@ package com.czqsoft.anes
 		 */		
 		public function sendImageContent(shareTo:String, image:BitmapData):void
 		{
-			_extContext.call(WECHAT_FUNCTION_SEND_IMAGE, shareTo, image);
 		}
 		/**
 		 * 发送应用信息 
@@ -138,7 +118,6 @@ package com.czqsoft.anes
 		 */		
 		public function sendAppContent(shareTo:String, title:String, text:String, url:String, image:BitmapData):void
 		{
-			_extContext.call(WECHAT_FUNCTION_SEND_APP, shareTo, title, text, url, image);
 		}
 	}
 }
