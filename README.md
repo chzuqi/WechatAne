@@ -2,6 +2,7 @@ WechatAne
 =========
 
 微信ane for ios
+（安卓还在测试中）
 
 WeixinSdk.instance.register("你的微信appid");  
 WeixinSdk.instance.addEventListener(StatusEvent.STATUS, onStatus);  
