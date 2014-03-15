@@ -8,16 +8,16 @@ WeixinSdk.instance.addEventListener(StatusEvent.STATUS, onStatus);
 
 function onStatus(e:StatusEvent):void  
 {   
-    trace(e.code, e.level);  
-    switch(e.code)  
-	{  
-		case "onResp":  
-			if (e.level == "0")  
-			{  
-                //你的分享成功代码    
-			}  
-			break;  
-	}  
+  trace(e.code, e.level);  
+  switch(e.code)  
+  {  
+    case "onResp":  
+      if (e.level == "0")  
+      {  
+        //你的分享成功代码    
+      }  
+      break;  
+  }  
 }  
   
 WeixinSdk.instance.sendTextContent(WeixinSdk.WXSceneSession, "text");  
