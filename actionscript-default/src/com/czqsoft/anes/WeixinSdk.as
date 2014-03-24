@@ -108,6 +108,14 @@ package com.czqsoft.anes
 		{
 		}
 		/**
+		 * 分享图片信息(by url) 
+		 * @param shareTo
+		 * @param imageUrl
+		 * 
+		 */	
+		public function sendImageContentByUrl(shareTo:String, imageUrl:String):void{
+		}
+		/**
 		 * 发送应用信息 
 		 * @param shareTo
 		 * @param title 标题

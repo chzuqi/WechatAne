@@ -158,6 +158,44 @@
     return NULL;
 }
 
+-(FREObject)sendImageUrlContent:(FREObject)shareTo
+                            url:(FREObject)imgUrl
+{
+    NSString *strShareTo;
+    if ([self.converter FREGetObject:shareTo asString:&strShareTo] != FRE_OK)
+    {
+        strShareTo = @"WXSceneSession";
+    }
+    
+    NSString *strImgUrl;
+    if ([self.converter FREGetObject:imgUrl asString:&strImgUrl] != FRE_OK)
+    {
+        strImgUrl = @"http://tp2.sinaimg.cn/1595852157/180/5596690249/1";
+    }
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImgUrl]]];
+    WXMediaMessage *message = [WXMediaMessage message];
+    
+    [message setThumbImage:image];
+    
+    WXImageObject *ext = [WXImageObject object];
+    ext.imageData = UIImagePNGRepresentation(image);
+    
+    message.mediaObject = ext;
+    message.description = @"hello world";
+    
+    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
+    req.bText = NO;
+    req.message = message;
+    req.scene = [self getScene:strShareTo];
+
+    
+    [WXApi sendReq:req];
+
+
+    
+    return NULL;
+}
+
 - (FREObject)sendImageContent:(FREObject)shareTo
                         image:(FREObject)image
 {
@@ -177,8 +215,7 @@
     [message setThumbImage:uiImage];
     
     WXImageObject *ext = [WXImageObject object];
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"res1" ofType:@"jpg"];
-    ext.imageData = UIImageJPEGRepresentation(uiImage, 0.9);
+    ext.imageData = UIImagePNGRepresentation(uiImage);
     
     message.mediaObject = ext;
     

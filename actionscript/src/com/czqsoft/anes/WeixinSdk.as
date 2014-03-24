@@ -42,13 +42,14 @@ package com.czqsoft.anes
 		 * 分享到收藏夹 
 		 */		
 		public static const WXSceneFavorite:String = "WXSceneFavorite";
-
-		private static const WECHAT_FUNCTION_REGISTER:String = "wechat_function_register";//与java端中Map里的key一致
-		private static const WECHAT_FUNCTION_SEND_TEXT:String = "wechat_function_text";//与java端中Map里的key一致
-		private static const WECHAT_FUNCTION_SEND_LINK:String = "wechat_function_link";//与java端中Map里的key一致
-		private static const WECHAT_FUNCTION_SEND_IMAGE:String = "wechat_function_image";//与java端中Map里的key一致
-		private static const WECHAT_FUNCTION_SEND_APP:String = "wechat_function_app";//与java端中Map里的key一致
-		private static const WECHAT_FUNCTION_OPEN_URL:String = "wechat_function_open_url";//与java端中Map里的key一致
+		//与java端中Map里的key一致
+		private static const WECHAT_FUNCTION_REGISTER:String = "wechat_function_register";
+		private static const WECHAT_FUNCTION_SEND_TEXT:String = "wechat_function_text";
+		private static const WECHAT_FUNCTION_SEND_LINK:String = "wechat_function_link";
+		private static const WECHAT_FUNCTION_SEND_IMAGE:String = "wechat_function_image";
+		private static const WECHAT_FUNCTION_SEND_IMAGE_URL:String = "wechat_function_image_url";
+		private static const WECHAT_FUNCTION_SEND_APP:String = "wechat_function_app";
+		private static const WECHAT_FUNCTION_OPEN_URL:String = "wechat_function_open_url";
 
 		public function WeixinSdk(target:IEventDispatcher=null)
 		{
@@ -126,6 +127,15 @@ package com.czqsoft.anes
 		public function sendImageContent(shareTo:String, image:BitmapData):void
 		{
 			_extContext.call(WECHAT_FUNCTION_SEND_IMAGE, shareTo, image);
+		}
+		/**
+		 * 分享图片信息(by url) 
+		 * @param shareTo
+		 * @param imageUrl
+		 * 
+		 */		
+		public function sendImageContentByUrl(shareTo:String, imageUrl:String):void{
+			_extContext.call(WECHAT_FUNCTION_SEND_IMAGE_URL, shareTo, imageUrl);
 		}
 		/**
 		 * 发送应用信息 

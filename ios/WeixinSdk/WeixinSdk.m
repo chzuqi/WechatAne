@@ -31,6 +31,7 @@ void WeixinContextInitializer(void* extData, const uint8_t* ctxType, FREContext 
         MAP_FUNCTION(wechat_function_text, NULL),
         MAP_FUNCTION(wechat_function_link, NULL),
         MAP_FUNCTION(wechat_function_image, NULL),
+        MAP_FUNCTION(wechat_function_image_url, NULL),
         MAP_FUNCTION(wechat_function_app, NULL),
         MAP_FUNCTION(wechat_function_open_url, NULL),
     };
@@ -62,6 +63,10 @@ ANE_FUNCTION(wechat_function_link)
 ANE_FUNCTION(wechat_function_image)
 {
     return [CCext_handle sendImageContent:argv[0] image:argv[1]];
+}
+ANE_FUNCTION(wechat_function_image_url)
+{
+    return [CCext_handle sendImageUrlContent:argv[0] url:argv[1]];
 }
 ANE_FUNCTION(wechat_function_app)
 {

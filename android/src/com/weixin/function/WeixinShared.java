@@ -11,7 +11,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
 
 public class WeixinShared {
-	public static final int THUMB_SIZE = 150;
+	public static final int THUMB_SIZE = 120;
 	public static IWXAPI api = null;
 	public static FREContext context = null;
 	public static String appid = null;
@@ -26,13 +26,14 @@ public class WeixinShared {
 	}
 	
 	public static int getSendTo(String type){
-		if (type == "WXSceneSession"){
+//		event("WXLOG", "sendTo:" + type);
+		if (type.equals("WXSceneSession")){
 			return SendMessageToWX.Req.WXSceneSession;			
-		}else if (type == "WXSceneTimeline"){
+		}else if (type.equals("WXSceneTimeline")){
 			return SendMessageToWX.Req.WXSceneTimeline;
 		}else{
 			//不能发送去收藏？
-			return SendMessageToWX.Req.WXSceneSession;
+			return SendMessageToWX.Req.WXSceneTimeline;
 		}
 	}
 	

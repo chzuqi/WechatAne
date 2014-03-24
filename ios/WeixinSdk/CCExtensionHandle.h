@@ -30,7 +30,8 @@
 
 - (FREObject)sendImageContent:(FREObject)shareTo
                         image:(FREObject)image;
-
+-(FREObject)sendImageUrlContent:(FREObject)shareTo
+                            url:(FREObject)imgUrl;
 - (FREObject)sendAppContent:(FREObject)shareTo
                       title:(FREObject)title
                        text:(FREObject)text

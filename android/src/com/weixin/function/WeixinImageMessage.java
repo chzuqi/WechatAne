@@ -25,8 +25,10 @@ public class WeixinImageMessage implements FREFunction {
 		    inputValue.acquire();
 		    int srcWidth = inputValue.getWidth();
 		    int srcHeight = inputValue.getHeight();
+//		    WeixinShared.event("ConverImage", "size:" + srcWidth + "," + srcHeight);
 		    bmp = Bitmap.createBitmap(srcWidth, srcHeight, Config.ARGB_8888);
 		    bmp.copyPixelsFromBuffer(inputValue.getBits());
+		    inputValue.release();
 		}
 		catch(Exception e)
 		{
@@ -41,7 +43,6 @@ public class WeixinImageMessage implements FREFunction {
 			msg.mediaObject = imgObj;
 			
 			Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, WeixinShared.THUMB_SIZE, WeixinShared.THUMB_SIZE, true);
-			bmp.recycle();
 			msg.thumbData = WeixinShared.bmpToByteArray(thumbBmp, true);  // 设置缩略图
 
 			SendMessageToWX.Req req = new SendMessageToWX.Req();
@@ -51,6 +52,7 @@ public class WeixinImageMessage implements FREFunction {
 			
 			// 调用api接口发送数据到微信
 			WeixinShared.api.sendReq(req);
+			bmp.recycle();
 		}
 		catch(Exception e)
 		{
