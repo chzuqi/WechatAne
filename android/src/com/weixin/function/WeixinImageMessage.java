@@ -21,14 +21,15 @@ public class WeixinImageMessage implements FREFunction {
 		try
 		{
 			sendTo = WeixinShared.getSendTo(arg1[0].getAsString());
-			FREBitmapData inputValue = (FREBitmapData)arg1[1];
-		    inputValue.acquire();
-		    int srcWidth = inputValue.getWidth();
-		    int srcHeight = inputValue.getHeight();
-//		    WeixinShared.event("ConverImage", "size:" + srcWidth + "," + srcHeight);
-		    bmp = Bitmap.createBitmap(srcWidth, srcHeight, Config.ARGB_8888);
-		    bmp.copyPixelsFromBuffer(inputValue.getBits());
-		    inputValue.release();
+			FREBitmapData as3Bitmap = (FREBitmapData)arg1[1];
+//		    inputValue.acquire();
+//		    int srcWidth = inputValue.getWidth();
+//		    int srcHeight = inputValue.getHeight();
+////		    WeixinShared.event("ConverImage", "size:" + srcWidth + "," + srcHeight);
+//		    bmp = Bitmap.createBitmap(srcWidth, srcHeight, Config.ARGB_8888);
+//		    bmp.copyPixelsFromBuffer(inputValue.getBits());
+//		    inputValue.release();
+			bmp = WeixinShared.getBitmapFromFreBitmapdata(as3Bitmap);
 		}
 		catch(Exception e)
 		{

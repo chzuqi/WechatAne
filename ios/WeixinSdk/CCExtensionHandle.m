@@ -188,10 +188,7 @@
     req.message = message;
     req.scene = [self getScene:strShareTo];
 
-    
     [WXApi sendReq:req];
-
-
     
     return NULL;
 }

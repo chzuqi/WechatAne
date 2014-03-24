@@ -4,8 +4,13 @@ import java.io.ByteArrayOutputStream;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.Canvas;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Paint;
 import android.util.Log;
 
+import com.adobe.fre.FREBitmapData;
 import com.adobe.fre.FREContext;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
@@ -52,5 +57,41 @@ public class WeixinShared {
 		}
 		
 		return result;
+	}
+	
+	public static Bitmap getBitmapFromFreBitmapdata(final FREBitmapData as3Bitmap){
+		Bitmap m_encodingBitmap         = null;
+		Canvas m_canvas                 = null;
+		Paint m_paint                   = null;    
+		final float[] m_bgrToRgbColorTransform  =
+		    {
+		        0,  0,  1f, 0,  0, 
+		        0,  1f, 0,  0,  0,
+		        1f, 0,  0,  0,  0, 
+		        0,  0,  0,  1f, 0
+		    };
+		final ColorMatrix               m_colorMatrix               = new ColorMatrix(m_bgrToRgbColorTransform);
+		final ColorMatrixColorFilter    m_colorFilter               = new ColorMatrixColorFilter(m_colorMatrix);
+		try{
+			as3Bitmap.acquire();
+			int srcWidth = as3Bitmap.getWidth();
+		    int srcHeight = as3Bitmap.getHeight();
+//		    event("WeixinShared", "size:" + srcWidth + "," + srcHeight);
+			m_encodingBitmap    = Bitmap.createBitmap(srcWidth, srcHeight, Bitmap.Config.ARGB_8888);
+			m_canvas        = new Canvas(m_encodingBitmap);
+			m_paint         = new Paint();
+			m_paint.setColorFilter(m_colorFilter);
+			
+			m_encodingBitmap.copyPixelsFromBuffer(as3Bitmap.getBits());
+			as3Bitmap.release();
+		}catch (Exception e) {
+		    e.printStackTrace();
+		    event("WeixinShared", "fail to conver image to bitmap");
+		}
+		//
+		// Convert the bitmap from BGRA to RGBA.
+		//
+		m_canvas.drawBitmap(m_encodingBitmap, 0, 0, m_paint);
+		return m_encodingBitmap;
 	}
 }
