@@ -49,12 +49,8 @@ class SendImageTask extends AsyncTask<String, Void, Void> {
 		WXMediaMessage msg = new WXMediaMessage();
 		msg.mediaObject = imgObj;
 		try{
-//			WeixinShared.event("WXLOG", "starting decode stream" + url);
 			Bitmap bmp = BitmapFactory.decodeStream(new URL(url).openStream());
-//			WeixinShared.event("WXLOG", "load complete");
 			Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, WeixinShared.THUMB_SIZE, WeixinShared.THUMB_SIZE, true);
-//			WeixinShared.event("WXLOG", "ready to recycle");
-			//bmp.recycle();
 			msg.thumbData = WeixinShared.bmpToByteArray(thumbBmp, true);
 		}catch(Exception e)
 		{
@@ -62,12 +58,10 @@ class SendImageTask extends AsyncTask<String, Void, Void> {
 			return null;
 		}
 		
-//		WeixinShared.event("WXLOG", "prepered sending");
 		SendMessageToWX.Req req = new SendMessageToWX.Req();
 		req.transaction = WeixinShared.buildTransaction("img");
 		req.message = msg;
 		req.scene = sendTo;
-//		WeixinShared.event("WXLOG", "sending");
 		// 调用api接口发送数据到微信
 		WeixinShared.api.sendReq(req);
 		return null;

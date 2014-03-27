@@ -353,7 +353,7 @@
 				GCC_VERSION = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/czq/Documents/anes/WeixinAne/ios/WeixinSdk/WeixinSdk/SDKExport,
+					/Users/czq/Documents/anes/WechatAne/ios/WeixinSdk/SDKExport,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,7 +370,7 @@
 				GCC_VERSION = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/czq/Documents/anes/WeixinAne/ios/WeixinSdk/WeixinSdk/SDKExport,
+					/Users/czq/Documents/anes/WechatAne/ios/WeixinSdk/SDKExport,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,7 +384,7 @@
 				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
 				EXECUTABLE_EXTENSION = ane;
 				EXECUTABLE_PREFIX = "";
-				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WechatAne/actionscript/bin/WeixinSdk.swc;
 				PRODUCT_NAME = WeixinSdk;
 			};
 			name = Debug;
@@ -395,7 +395,7 @@
 				AIR_SDK_PATH = /Users/czq/Downloads/AIR/AIR_3.8;
 				EXECUTABLE_EXTENSION = ane;
 				EXECUTABLE_PREFIX = "";
-				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WeixinAne/WeixinSdk/bin/WeixinSdk.swc;
+				NATIVEEXTENSION_SWC = /Users/czq/Documents/anes/WechatAne/actionscript/bin/WeixinSdk.swc;
 				PRODUCT_NAME = WeixinSdk;
 			};
 			name = Release;

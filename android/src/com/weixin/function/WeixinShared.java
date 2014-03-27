@@ -16,7 +16,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
 
 public class WeixinShared {
-	public static final int THUMB_SIZE = 120;
+	public static final int THUMB_SIZE = 100;
 	public static IWXAPI api = null;
 	public static FREContext context = null;
 	public static String appid = null;
@@ -31,7 +31,6 @@ public class WeixinShared {
 	}
 	
 	public static int getSendTo(String type){
-//		event("WXLOG", "sendTo:" + type);
 		if (type.equals("WXSceneSession")){
 			return SendMessageToWX.Req.WXSceneSession;			
 		}else if (type.equals("WXSceneTimeline")){
@@ -60,6 +59,7 @@ public class WeixinShared {
 	}
 	
 	public static Bitmap getBitmapFromFreBitmapdata(final FREBitmapData as3Bitmap){
+		//http://stackoverflow.com/questions/17314467/bitmap-channels-order-different-in-android
 		Bitmap m_encodingBitmap         = null;
 		Canvas m_canvas                 = null;
 		Paint m_paint                   = null;    
@@ -76,7 +76,6 @@ public class WeixinShared {
 			as3Bitmap.acquire();
 			int srcWidth = as3Bitmap.getWidth();
 		    int srcHeight = as3Bitmap.getHeight();
-//		    event("WeixinShared", "size:" + srcWidth + "," + srcHeight);
 			m_encodingBitmap    = Bitmap.createBitmap(srcWidth, srcHeight, Bitmap.Config.ARGB_8888);
 			m_canvas        = new Canvas(m_encodingBitmap);
 			m_paint         = new Paint();
@@ -86,7 +85,7 @@ public class WeixinShared {
 			as3Bitmap.release();
 		}catch (Exception e) {
 		    e.printStackTrace();
-		    event("WeixinShared", "fail to conver image to bitmap");
+		    Log.d("getBitmapFromFreBitmapdata", "fail to conver image to bitmap");
 		}
 		//
 		// Convert the bitmap from BGRA to RGBA.
@@ -94,4 +93,5 @@ public class WeixinShared {
 		m_canvas.drawBitmap(m_encodingBitmap, 0, 0, m_paint);
 		return m_encodingBitmap;
 	}
+	
 }

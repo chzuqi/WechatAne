@@ -1,7 +1,6 @@
 package com.weixin.function;
 
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.Config;
 
 import com.adobe.fre.FREBitmapData;
 import com.adobe.fre.FREContext;
@@ -22,13 +21,6 @@ public class WeixinImageMessage implements FREFunction {
 		{
 			sendTo = WeixinShared.getSendTo(arg1[0].getAsString());
 			FREBitmapData as3Bitmap = (FREBitmapData)arg1[1];
-//		    inputValue.acquire();
-//		    int srcWidth = inputValue.getWidth();
-//		    int srcHeight = inputValue.getHeight();
-////		    WeixinShared.event("ConverImage", "size:" + srcWidth + "," + srcHeight);
-//		    bmp = Bitmap.createBitmap(srcWidth, srcHeight, Config.ARGB_8888);
-//		    bmp.copyPixelsFromBuffer(inputValue.getBits());
-//		    inputValue.release();
 			bmp = WeixinShared.getBitmapFromFreBitmapdata(as3Bitmap);
 		}
 		catch(Exception e)
@@ -54,6 +46,7 @@ public class WeixinImageMessage implements FREFunction {
 			// 调用api接口发送数据到微信
 			WeixinShared.api.sendReq(req);
 			bmp.recycle();
+			
 		}
 		catch(Exception e)
 		{
