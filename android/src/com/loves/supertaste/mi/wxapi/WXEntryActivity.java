@@ -21,7 +21,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);//wx51c7ffc4b174a70a
-//        WeixinShared.api = WXAPIFactory.createWXAPI(this, "wx51c7ffc4b174a70a", false);
+        WeixinShared.api = WXAPIFactory.createWXAPI(this, "wx51c7ffc4b174a70a", false);
         WeixinShared.api.handleIntent(getIntent(), this);
     }
 
