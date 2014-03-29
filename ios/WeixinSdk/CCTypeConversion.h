@@ -23,4 +23,6 @@
 - (FREResult) FRESetObject:(FREObject)asObject property:(const uint8_t*)propertyName toDouble:(double)value;
 - (FREResult) FRESetObject:(FREObject)asObject property:(const uint8_t*)propertyName toDate:(NSDate*)value;
 - (FREResult)FREGetImage:(UIImage**)value asObject:(FREObject*)asImage;
+
+- (UIImage*)thumbnailOfImage:(UIImage*)image withMaxSize:(float)maxsize;
 @end

@@ -351,6 +351,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeixinSdk/WeixinSdk-Prefix.pch";
 				GCC_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/czq/Documents/anes/WechatAne/ios/WeixinSdk/SDKExport,
@@ -368,6 +369,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeixinSdk/WeixinSdk-Prefix.pch";
 				GCC_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/czq/Documents/anes/WechatAne/ios/WeixinSdk/SDKExport,
