@@ -1,6 +1,7 @@
 package com.weixin.function;
 
 import android.graphics.Bitmap;
+import android.widget.Toast;
 
 import com.adobe.fre.FREBitmapData;
 import com.adobe.fre.FREContext;
@@ -30,6 +31,10 @@ public class WeixinImageMessage implements FREFunction {
 		}
 		try
 		{
+			if (WeixinShared.api.isWXAppInstalled() == false){
+				Toast.makeText(WeixinShared.context.getActivity(), "微信没安装，无法分享。", Toast.LENGTH_SHORT).show();
+				return null;
+			}
 			WXImageObject imgObj = new WXImageObject(bmp);
 			
 			WXMediaMessage msg = new WXMediaMessage();

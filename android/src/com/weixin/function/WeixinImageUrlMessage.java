@@ -5,6 +5,7 @@ import java.net.URL;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
@@ -55,6 +56,11 @@ class SendImageTask extends AsyncTask<String, Void, Void> {
 		}catch(Exception e)
 		{
 			WeixinShared.event("ERROR while loading", e.toString());
+			return null;
+		}
+		
+		if (WeixinShared.api.isWXAppInstalled() == false){
+			Toast.makeText(WeixinShared.context.getActivity(), "微信没安装，无法分享。", Toast.LENGTH_SHORT).show();
 			return null;
 		}
 		

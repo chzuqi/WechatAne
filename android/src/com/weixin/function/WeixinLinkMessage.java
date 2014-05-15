@@ -1,5 +1,7 @@
 package com.weixin.function;
 
+import android.widget.Toast;
+
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
@@ -30,6 +32,10 @@ public class WeixinLinkMessage implements FREFunction {
 		}
 		try
 		{
+			if (WeixinShared.api.isWXAppInstalled() == false){
+				Toast.makeText(WeixinShared.context.getActivity(), "微信没安装，无法分享。", Toast.LENGTH_SHORT).show();
+				return null;
+			}
 			WXWebpageObject webpage = new WXWebpageObject();
 			webpage.webpageUrl = url;
 			WXMediaMessage msg = new WXMediaMessage(webpage);

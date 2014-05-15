@@ -281,6 +281,11 @@
     return NULL;
 }
 
+- (FREObject)isWechatInstalled
+{
+    return [self.converter getFREBool:[WXApi isWXAppInstalled]];
+}
+
 #pragma base function
 
 - (int)getScene:(NSString*)shareTo

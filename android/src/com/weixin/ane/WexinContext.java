@@ -8,6 +8,7 @@ import com.adobe.fre.FREFunction;
 import com.weixin.function.WeixinAppMessage;
 import com.weixin.function.WeixinImageMessage;
 import com.weixin.function.WeixinImageUrlMessage;
+import com.weixin.function.WeixinIsInstalled;
 import com.weixin.function.WeixinLinkMessage;
 import com.weixin.function.WeixinOpenUrl;
 import com.weixin.function.WeixinRegister;
@@ -22,6 +23,7 @@ public class WexinContext extends FREContext {
 	private static final String WECHAT_FUNCTION_SEND_IMAGE_URL = "wechat_function_image_url";//与java端中Map里的key一致
 	private static final String WECHAT_FUNCTION_SEND_APP = "wechat_function_app";//与java端中Map里的key一致
 	private static final String WECHAT_FUNCTION_OPEN_URL = "wechat_function_open_url";//与java端中Map里的key一致
+	private static final String WECHAT_FUNCTION_IS_INSTALLED = "wechat_function_is_installed";
 	@Override
 	public void dispose() {
 
@@ -29,7 +31,6 @@ public class WexinContext extends FREContext {
 
 	@Override
 	public Map<String, FREFunction> getFunctions() {
-		// TODO Auto-generated method stub
 		Map<String, FREFunction> map = new HashMap<String, FREFunction>();
 		//映射
 		map.put(WECHAT_FUNCTION_REGISTER, new WeixinRegister());
@@ -39,6 +40,7 @@ public class WexinContext extends FREContext {
 		map.put(WECHAT_FUNCTION_SEND_IMAGE_URL, new WeixinImageUrlMessage());
 		map.put(WECHAT_FUNCTION_SEND_APP, new WeixinAppMessage());
 		map.put(WECHAT_FUNCTION_OPEN_URL, new WeixinOpenUrl());
+		map.put(WECHAT_FUNCTION_IS_INSTALLED, new WeixinIsInstalled());
 		return map;
 	}
 

@@ -39,4 +39,6 @@
                       image:(FREObject)image;
 
 
+- (FREObject)isWechatInstalled;
+
 @end

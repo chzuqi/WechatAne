@@ -82,3 +82,4 @@ ANE_FUNCTION(wechat_function_image);
 ANE_FUNCTION(wechat_function_image_url);
 ANE_FUNCTION(wechat_function_app);
 ANE_FUNCTION(wechat_function_open_url);
+ANE_FUNCTION(wechat_function_is_installed);

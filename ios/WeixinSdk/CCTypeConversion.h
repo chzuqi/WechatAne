@@ -25,4 +25,7 @@
 - (FREResult)FREGetImage:(UIImage**)value asObject:(FREObject*)asImage;
 
 - (UIImage*)thumbnailOfImage:(UIImage*)image withMaxSize:(float)maxsize;
+
+- (FREObject)getFREBool:(BOOL) value;
+
 @end

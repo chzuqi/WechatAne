@@ -50,6 +50,7 @@ package com.czqsoft.anes
 		private static const WECHAT_FUNCTION_SEND_IMAGE_URL:String = "wechat_function_image_url";
 		private static const WECHAT_FUNCTION_SEND_APP:String = "wechat_function_app";
 		private static const WECHAT_FUNCTION_OPEN_URL:String = "wechat_function_open_url";
+		private static const WECHAT_FUNCTION_IS_INSTALLED:String = "wechat_function_is_installed";
 
 		public function WeixinSdk(target:IEventDispatcher=null)
 		{
@@ -137,6 +138,12 @@ package com.czqsoft.anes
 		public function sendImageContentByUrl(shareTo:String, imageUrl:String):void{
 			_extContext.call(WECHAT_FUNCTION_SEND_IMAGE_URL, shareTo, imageUrl);
 		}
+		
+		public function isInstalled():Boolean
+		{
+			return _extContext.call(WECHAT_FUNCTION_IS_INSTALLED);
+		}
+		
 		/**
 		 * 发送应用信息 
 		 * @param shareTo

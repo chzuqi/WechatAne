@@ -34,6 +34,7 @@ void WeixinContextInitializer(void* extData, const uint8_t* ctxType, FREContext 
         MAP_FUNCTION(wechat_function_image_url, NULL),
         MAP_FUNCTION(wechat_function_app, NULL),
         MAP_FUNCTION(wechat_function_open_url, NULL),
+        MAP_FUNCTION(wechat_function_is_installed, NULL),
     };
     
     *numFunctionsToTest = sizeof(func) / sizeof(FRENamedFunction);
@@ -75,5 +76,9 @@ ANE_FUNCTION(wechat_function_app)
 ANE_FUNCTION(wechat_function_open_url)
 {
     return [CCext_handle openUrl:argv[0]];
+}
+ANE_FUNCTION(wechat_function_is_installed)
+{
+    return [CCext_handle isWechatInstalled];
 }
 

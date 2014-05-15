@@ -255,7 +255,13 @@
     CGImageRelease( ref );
     
     return [[thumb retain] autorelease];
-    
+}
+
+- (FREObject)getFREBool:(BOOL) value
+{
+    FREObject fo;
+    FRENewObjectFromBool(value, &fo);
+    return fo;
 }
 
 @end
