@@ -128,6 +128,12 @@
         strShareTo = @"WXSceneSession";
     }
     
+    NSString *strTitle;
+    if ([self.converter FREGetObject:title asString:&strTitle] != FRE_OK)
+    {
+        return NULL;
+    }
+    
     NSString *strText;
     if ([self.converter FREGetObject:text asString:&strText] != FRE_OK)
     {
@@ -141,7 +147,7 @@
     }
     
     WXMediaMessage *message = [WXMediaMessage message];
-    message.title = @"爱吃货";
+    message.title = strTitle;
     message.description = strText;
     
     WXWebpageObject *ext = [WXWebpageObject object];
@@ -181,7 +187,7 @@
     ext.imageData = UIImagePNGRepresentation(image);
     
     message.mediaObject = ext;
-    message.description = @"hello world";
+    message.description = @"";
     
     SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
     req.bText = NO;

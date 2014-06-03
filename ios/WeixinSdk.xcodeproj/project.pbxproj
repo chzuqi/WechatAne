@@ -318,7 +318,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_3.8/include/;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_13.0/include/;
 			};
 			name = Debug;
 		};
@@ -339,7 +339,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_3.8/include/;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_13.0/include/;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -359,7 +359,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_4.0/include/;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_13.0/include/;
 			};
 			name = Debug;
 		};
@@ -378,7 +378,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_4.0/include/;
+				USER_HEADER_SEARCH_PATHS = /Users/czq/Downloads/AIR/AIR_13.0/include/;
 			};
 			name = Release;
 		};

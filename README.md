@@ -49,3 +49,5 @@ iOS接收回调的话则是加入
   </dict>
 </array>
 ```
+
+打包ANE请修改build.properties文件，然后在该目录执行ant(必须是osx系统，没有请用虚拟机)
