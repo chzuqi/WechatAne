@@ -2,6 +2,7 @@ WechatAne
 =========
 
 微信ane for ios and android
+
 ```
 WeixinSdk.instance.register("你的微信appid");
 WeixinSdk.instance.addEventListener(StatusEvent.STATUS, onStatus);
@@ -39,7 +40,9 @@ WeixinSdk.instance.sendAppContent(WeixinSdk.WXSceneTimeline, "title", "content",
 
 iOS接收回调的话则是加入
 ```
-<dict>
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
     <key>CFBundleURLName</key>
     <string>UrlWeixin</string>
     <key>CFBundleURLSchemes</key>
@@ -50,4 +53,9 @@ iOS接收回调的话则是加入
 </array>
 ```
 
-打包ANE请修改build.properties文件，然后在该目录执行ant(必须是osx系统，没有请用虚拟机)
+Tips：
+* 注意微信分享应用图片不能大于32k，否则微信端会自动无视掉。
+* 重新打包ANE请修改build.properties文件,改成你的环境配置，然后在该目录执行ant(必须是osx系统，没有请用虚拟机)
+* 感谢两刀同学的建议，iOS回调改成更易读懂的版本
+* 如果不需要安卓回调，理论上不需要重新打包本ane
+
