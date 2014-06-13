@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160">
+	
+	<fx:Script>
+		<![CDATA[
+			
+			[Embed(source="pic.JPG")]
+			public var bigimg:Class;
+			
+			[Embed(source="icon.png")]
+			public var icon:Class;
+			
+			import com.czqsoft.anes.WeixinSdk;
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				WeixinSdk.instance.addEventListener(StatusEvent.STATUS, onStatus);
+				WeixinSdk.instance.register(appid.text);
+			}
+			
+			private function onStatus(e:StatusEvent):void
+			{
+				txtout.appendText(":" + e.code + " " + e.level + "\n");
+			}
+			
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				WeixinSdk.instance.sendTextContent(WeixinSdk.WXSceneTimeline, "三国是中国历史上的一段时期，这个时期出现曹魏、蜀汉、孙吴等三个国家。汉末三国战争不断，使得人口下降，经济受损，三国皆重视经济发展。由于战争需求，各种技术都有较大发展。三国局势主要为蜀吴同盟对抗曹魏，各国疆域变化不大。而曹魏朝廷渐渐的被司马氏一手掌控。263年司马昭为建立军功准备篡位，发动魏灭蜀之战，蜀汉亡。两年后司马昭病死，其子司马炎废魏元帝自立，国号为“晋”，史称西晋，曹魏亡。西晋最后于280年发起晋灭吴之战，灭亡孙吴，统一中国。至此三国时期结束，进入西晋时期。三国时期人才辈出，后世常常追思当时风云人物。明代罗贯中以这段历史为蓝本，所撰写的历史小说《三国演义》成为了中国四大名著之一。");
+			}
+			
+			protected function button3_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				var c:Bitmap = new bigimg();
+				WeixinSdk.instance.sendImageContent(WeixinSdk.WXSceneTimeline, c.bitmapData);
+			}
+			
+			
+			
+			protected function button4_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				var c:Bitmap = new icon();
+				WeixinSdk.instance.sendAppContent(WeixinSdk.WXSceneTimeline, "title", "tet", "http://www.baidu.com", c.bitmapData);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:TextInput id="appid" x="10" y="10" prompt="appid" text="wx51c7ffc4b174a70a"/>
+	<s:Button x="10" y="51" width="150" height="37" label="register"
+			  click="button1_clickHandler(event)"/>
+	<s:Button x="159" y="51" width="150" height="37" label="text" click="button2_clickHandler(event)"/>
+	<s:Button x="10" y="93" width="150" height="37" label="image" click="button3_clickHandler(event)"/>
+	<s:Button x="159" y="93" width="151" height="37" label="app" click="button4_clickHandler(event)"/>
+	<s:TextArea id="txtout" x="10" y="138" height="312"/>
+</s:Application>
