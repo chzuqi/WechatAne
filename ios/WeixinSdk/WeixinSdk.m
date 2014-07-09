@@ -71,7 +71,7 @@ ANE_FUNCTION(wechat_function_image_url)
 }
 ANE_FUNCTION(wechat_function_app)
 {
-    return [CCext_handle sendAppContent:argv[0] title:argv[1] text:argv[1] url:argv[3] image:argv[4]];
+    return [CCext_handle sendAppContent:argv[0] title:argv[1] text:argv[2] url:argv[3] image:argv[4]];
 }
 ANE_FUNCTION(wechat_function_open_url)
 {
